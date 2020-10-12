@@ -19,6 +19,7 @@ from transformers.modeling_bert import BertConfig, BertModel
 from transformers.optimization import AdamW
 from transformers.tokenization_bert import BertTokenizer
 from transformers.tokenization_roberta import RobertaTokenizer
+from transformers import CamembertTokenizer
 
 from dpr.utils.data_utils import Tensorizer
 from .biencoder import BiEncoder
@@ -95,6 +96,8 @@ def get_bert_tokenizer(pretrained_cfg_name: str, do_lower_case: bool = True):
 
 def get_roberta_tokenizer(pretrained_cfg_name: str, do_lower_case: bool = True):
     # still uses HF code for tokenizer since they are the same
+    if "camembert" in pretrained_cfg_name:
+        return CamembertTokenizer.from_pretrained(pretrained_cfg_name, do_lower_case=do_lower_case)
     return RobertaTokenizer.from_pretrained(pretrained_cfg_name, do_lower_case=do_lower_case)
 
 
