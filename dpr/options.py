@@ -26,7 +26,7 @@ def add_tokenizer_params(parser: argparse.ArgumentParser):
                         help="Whether to lower case the input text. True for uncased models, False for cased models.")
 
 
-def add_encoder_params(parser: argparse.ArgumentParser):
+def     add_encoder_params(parser: argparse.ArgumentParser):
     """
         Common parameters to initialize an encoder-based model
     """
