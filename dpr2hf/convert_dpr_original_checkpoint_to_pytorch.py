@@ -1,3 +1,5 @@
+# Taken from here https://github.com/huggingface/transformers/blob/dc552b9b7025ea9c38717f30ad3d69c2a972049d/src/transformers/convert_dpr_original_checkpoint_to_pytorch.py#L22
+
 import argparse
 import collections
 from pathlib import Path
