@@ -1,7 +1,7 @@
 """
-This fast script transforms the output checkpoint file from DPR code to HuggingFace's
-Based on DPR's own negerate_dense_embeddings and dense_retriever.py
-It only works with camembert !
+This fast script transforms the output checkpoint file from DPR code to a HuggingFace's Roberta model
+Based on DPR's own genrate_dense_embeddings and dense_retriever.py, and transformer's converter scripts.
+It aims camembert/roberta models!
 """
 from dpr.models import init_biencoder_components
 from dpr.options import set_encoder_params_from_state, print_args
